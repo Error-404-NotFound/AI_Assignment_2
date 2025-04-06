@@ -2,7 +2,7 @@ from environment import create_frozen_lake_env
 import matplotlib.pyplot as plt
 import numpy as np
 from utils import *
-from search_algo import dfbnb, ida_star
+from search_algo import dfbnb, ida_star, hill_climb, simulated_annealing
 
 def run_search_algorithms(env, episodes=5):
     dfbnb_times = []
@@ -39,4 +39,17 @@ if __name__ == "__main__":
     dfbnb_times, ida_times = run_search_algorithms(env, episodes=5)
     plot_results_dfbnb_ida(dfbnb_times, ida_times)
     plot_average_results(dfbnb_times, ida_times)
-    print("All algorithms executed successfully.")
+    print("DFBnb and IDA* executed successfully.")
+    
+    coords, best_route, best_cost, costs = hill_climb(num_nodes=100, iterations=10000)
+    print("Best route:", best_route)
+    print("Best cost:", best_cost)
+    hill_climb_cost_vs_iterations(costs, "results/hill_climb_costs.png")
+    animated_tour_gif(coords, best_route, gif_name="results/hc_tour.gif", title="Hill Climbing Final Tour")
+    
+    coords, best_route, best_cost, costs = simulated_annealing(num_nodes=100, iterations=10000, initial_temp=100.0, cooling_rate=0.995)
+    print("Best route:", best_route)
+    print("Best cost:", best_cost)
+    simulated_annealing_cost_vs_iterations(costs, "results/simulated_annealing_costs.png")
+    animated_tour_gif(coords, best_route, gif_name="results/sa_tour.gif", title="Simulated Annealing Final Tour")
+    print("Hill Climbing and Simulated Annealing executed successfully.")

@@ -3,3 +3,6 @@ imageio==2.34.1
 matplotlib==3.8.3
 numpy==1.26.4
 pygame==2.6.1
+networkx==3.4.2
+gym==0.26.2 
+gym_notices==0.0.8
