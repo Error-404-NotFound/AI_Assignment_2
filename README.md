@@ -1,7 +1,17 @@
 # Spring_2025_AI_Assignment_2
-Contributors:
+
+This repository contains implementations of classical search and optimization algorithms applied to various environments including Frozen Lake and the Traveling Salesman Problem (TSP). Visualizations and performance metrics are also provided to analyze and compare the efficiency of each method.
+
+## Contributors:
 - CS22B028 Johri Aniket Manish
 - CS22B024 Harshit Garg
+
+## How to Run
+
+1. Clone the repository
+```bash
+git clone 
+```
 
 ```bash
 .
