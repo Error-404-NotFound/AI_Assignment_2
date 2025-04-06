@@ -10,8 +10,61 @@ This repository contains implementations of classical search and optimization al
 
 1. Clone the repository
 ```bash
-git clone 
+git clone https://github.com/Error-404-NotFound/AI_Assignment_2.git
 ```
+2. Go to the cloned repository
+```bash
+cd AI_Assignment_2
+```
+3. Ensure Python is installed
+```bash
+python --version # Output: Python 3.12.4
+```
+4. Create a virtual environment and activate it
+```bash
+python -m venv AI
+```
+> [!TIP]
+> For Linux:
+>```bash
+>source AI/bin/activate
+>```
+>For Windows:
+>```bash
+>AI\Scripts\activate.bat
+>```
+5. Install dependencies
+```bash
+pip install -r requirements.txt
+```
+6. Run main.py
+```bash
+python main.py
+```
+## Implemented Algorithms
+
+- **DFBnB (Depth-First Branch and Bound)**  
+  Efficient tree-based search for pathfinding in environments like Frozen Lake.
+
+- **IDA\*** (Iterative Deepening A*)  
+  Combines depth-first and heuristic search to balance memory and performance.
+
+- **Hill Climbing**  
+  Greedy optimization approach for improving tour cost in TSP.
+
+- **Simulated Annealing**  
+  Probabilistic optimization technique for escaping local minima in TSP.
+
+## Environments
+
+- **Frozen Lake**  
+  Grid world used to test search algorithms like DFBnB and IDA*.
+
+- **Traveling Salesman Problem (TSP)**  
+  Custom TSP environment from:
+  - [VRP-GYM](https://github.com/kevin-schumann/VRP-GYM)
+ 
+## Project Structure
 
 ```bash
 .
