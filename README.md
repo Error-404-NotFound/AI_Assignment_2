@@ -3,6 +3,7 @@ Contributors:
 - CS22B028 Johri Aniket Manish
 - CS22B024 Harshit Garg
 
+```bash
 .
 ├── results/
 │   ├── average_search_times.png
@@ -29,3 +30,4 @@ Contributors:
 ├── main.py
 ├── requirements.txt
 └── utils.py
+```
