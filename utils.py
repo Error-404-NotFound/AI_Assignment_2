@@ -114,3 +114,12 @@ def simulated_annealing_cost_vs_iterations(costs, stats_path):
     plt.savefig(stats_path)
     plt.show()
     print(f"Stats saved to: {stats_path}")
+    
+def plot_time(hc,sa):
+    plt.bar(['Hill Climbing', 'Simulated Annealing'], [hc, sa], color=['skyblue', 'salmon'])
+    plt.ylabel("Average Time Taken (s)")
+    plt.title("Average Time Taken by HC and SA")
+    plt.grid(axis='y')
+    plt.tight_layout()
+    plt.savefig("results/times_for_hc_and_sa.png")
+    plt.show()

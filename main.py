@@ -54,12 +54,11 @@ if __name__ == "__main__":
     plot_average_results(dfbnb_times, ida_times)
     print("DFBnb and IDA* executed successfully.")
     
-    
     start_time = time.time()
     coords, best_route, best_cost, costs = hill_climb(num_nodes=100, iterations=10000)
     end_time = time.time()
-    elapsed_time = end_time - start_time
-    print(f"Hill Climbing execution time: {elapsed_time:.6f} seconds")
+    elapsed_time_hc = end_time - start_time
+    print(f"Hill Climbing execution time: {elapsed_time_hc:.6f} seconds")
     print("Best route:", best_route)
     print("Best cost:", best_cost)
     hill_climb_cost_vs_iterations(costs, "results/hill_climb_costs.png")
@@ -68,10 +67,11 @@ if __name__ == "__main__":
     start_time = time.time()
     coords, best_route, best_cost, costs = simulated_annealing(num_nodes=100, iterations=10000, initial_temp=100.0, cooling_rate=0.995)
     end_time = time.time()
-    elapsed_time = end_time - start_time
-    print(f"Simulated Annealing execution time: {elapsed_time:.6f} seconds")
+    elapsed_time_sa = end_time - start_time
+    print(f"Simulated Annealing execution time: {elapsed_time_sa:.6f} seconds")
     print("Best route:", best_route)
     print("Best cost:", best_cost)
     simulated_annealing_cost_vs_iterations(costs, "results/simulated_annealing_costs.png")
     animated_tour_gif(coords, best_route, gif_name="results/sa_tour.gif", title="Simulated Annealing Final Tour")
+    plot_time(elapsed_time_hc, elapsed_time_sa)
     print("Hill Climbing and Simulated Annealing executed successfully.")
