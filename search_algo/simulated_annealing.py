@@ -64,7 +64,7 @@ def simulated_annealing(num_nodes=100, iterations=1000, initial_temp=100.0, cool
                 fig, ax = plt.subplots(figsize=(6, 6))
                 tour_coords = coords[best_route + [best_route[0]]]
                 ax.plot(tour_coords[:, 0], tour_coords[:, 1], 'o-', color='green')
-                ax.set_title(f"Simulated Annealing Step {i}\nCost: {best_cost:.2f}")
+                ax.set_title(f"Simulated_Annealing_Simulation_across_different_iterations \nStep {i}\nCost: {best_cost:.2f}")
                 ax.axis("off")
                 frame_path = f"{frame_folder}/frame_{i:03d}.png"
                 plt.savefig(frame_path)
