@@ -1,8 +1,14 @@
+import os
 import subprocess
 
 repo_url = "https://github.com/kevin-schumann/VRP-GYM.git"
 destination = "./VRP-GYM"
-subprocess.run(["git", "clone", repo_url, destination], check=True)
+
+if not os.path.exists(destination):
+    subprocess.run(["git", "clone", repo_url, destination], check=True)
+else:
+    print(f"Repository already exists at {destination}, skipping clone.")
+
 
 from environment import create_frozen_lake_env
 import matplotlib.pyplot as plt
